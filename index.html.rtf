@@ -1,0 +1,39 @@
+{\rtf1\ansi\ansicpg1252\cocoartf2822
+\cocoatextscaling0\cocoaplatform0{\fonttbl\f0\fswiss\fcharset0 Helvetica;}
+{\colortbl;\red255\green255\blue255;}
+{\*\expandedcolortbl;;}
+\margl1440\margr1440\vieww11520\viewh8400\viewkind0
+\pard\tx720\tx1440\tx2160\tx2880\tx3600\tx4320\tx5040\tx5760\tx6480\tx7200\tx7920\tx8640\pardirnatural\partightenfactor0
+
+\f0\fs24 \cf0 <!DOCTYPE html>\
+<html>\
+<head>\
+  <title>ClearView Insurance - Loan Officer Upload Portal</title>\
+  <link rel="stylesheet" href="\{\{ url_for('static', filename='style.css') \}\}">\
+</head>\
+<body>\
+  <div class="container">\
+    <img src="\{\{ url_for('static', filename='clearview_logo.png') \}\}" alt="ClearView Insurance Logo" class="logo">\
+    <h1>Loan Officer Upload Portal</h1>\
+    <p>Please fill out your information and upload all documents needed for a quote.</p>\
+\
+    <form action="/upload" method="POST" enctype="multipart/form-data">\
+      <label>Name</label>\
+      <input type="text" name="name" required>\
+\
+      <label>Email</label>\
+      <input type="email" name="email" required>\
+\
+      <label>Company</label>\
+      <input type="text" name="company" required>\
+\
+      <label>Upload Documents</label>\
+      <input type="file" name="files" multiple required>\
+\
+      <button type="submit">Submit</button>\
+    </form>\
+  </div>\
+</body>\
+</html>\
+\
+}
