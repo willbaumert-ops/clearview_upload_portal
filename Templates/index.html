@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>ClearView Insurance - Loan Officer Upload Portal</title>
+  <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+<body>
+  <div class="container">
+    <img src="{{ url_for('static', filename='clearview_logo.png') }}" alt="ClearView Insurance Logo" class="logo">
+    <h1>Loan Officer Upload Portal</h1>
+    <p>Please fill out your information and upload all documents needed for a quote.</p>
+
+    <form action="/upload" method="POST" enctype="multipart/form-data">
+      <label>Name</label>
+      <input type="text" name="name" required>
+
+      <label>Email</label>
+      <input type="email" name="email" required>
+
+      <label>Company</label>
+      <input type="text" name="company" required>
+
+      <label>Upload Documents</label>
+      <input type="file" name="files" multiple required>
+
+      <button type="submit">Submit</button>
+    </form>
+  </div>
+</body>
+</html>
+
